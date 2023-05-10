@@ -58,6 +58,6 @@ export async function read() {
       );
     });
   } catch (error) {
-    console.log(error);
+    console.log(chalk.bgGreen(error));
   }
 }

@@ -1,5 +1,7 @@
 import {read, write} from "./operaciones.js";
+import chalk from "chalk";
 
+chalk.level = 1
 // captura de input en consola
 const values = process.argv.slice(3);
 // creacion del objeto entregado a traves del input
@@ -19,6 +21,6 @@ switch (process.argv[2]) {
     read();
     break;
   default:
-    console.log("No se reconoce el comando: " + process.argv[2] + ", intente con 'registrar' o 'leer'");
+    console.log(chalk.bgRed("No se reconoce el comando: " + process.argv[2] + ", intente con 'registrar' o 'leer'"));
     break;
 }
